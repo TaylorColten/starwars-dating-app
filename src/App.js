@@ -115,7 +115,7 @@ render() {
     <div className="App">
 
       <div className="App-header">
-        <h1>the right could be out of this world!</h1>
+        <h1>The right one for you could be out of this world!</h1>
         <h2>Click the button to find out</h2>
       </div>
       <div>
@@ -125,13 +125,13 @@ render() {
           size="lg"
           label="its a match"
           onClick={this.handleClick}
-        ></Button>
+        >match</Button>
         <Button
           color="red"
           size="lg"
           label="no thank you"
           onClick={this.handleClick}
-        ></Button>
+        >pass</Button>
       </div>
 
     <div className="d-flex justify-content-around">
