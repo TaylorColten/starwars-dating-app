@@ -4,11 +4,7 @@ import './Matches.css'
 
 const Matches = (props) => {
   return (
-    <div
-      style={{
-        backgroundColor: props.type === 'light' ? 'pink' : 'gray',
-      }}
-    >
+    <div>
       {props.matches.length > 0
         && props.Matches
           .map((character, index) => {
