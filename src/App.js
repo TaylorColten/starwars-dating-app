@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { Button } from 'reactstrap';
 import head from 'lodash/head'
 import './App.css';
@@ -126,14 +125,13 @@ render() {
           size="lg"
           label="its a match"
           onClick={this.handleClick}
-        />
+        ></Button>
         <Button
           color="red"
           size="lg"
-          labelColor='#fff'
           label="no thank you"
           onClick={this.handleClick}
-        />
+        ></Button>
       </div>
 
     <div className="d-flex justify-content-around">
