@@ -6,11 +6,11 @@ const Matches = (props) => {
   return (
     <div
       style={{
-        backgroundColor: props.type === 'match' ? 'pink' : 'gray',
+        backgroundColor: props.type === 'heroes' ? 'pink' : 'gray',
       }}
     >
       {props.matches.length > 0
-        && props.matches
+        && props.Matches
           .map((character, index) => {
             return (
               <li

@@ -122,11 +122,14 @@ render() {
       <div>
         <h1>{fetchResults && fetchResults.length > 0 ? fetchResults[0].name : ''}</h1>
         <Button
+          color="green"
+          size="lg"
           label="its a match"
           onClick={this.handleClick}
         />
         <Button
-          backgroundColor='grey'
+          color="red"
+          size="lg"
           labelColor='#fff'
           label="no thank you"
           onClick={this.handleClick}
