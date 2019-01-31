@@ -15,9 +15,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      // Create an iterator. Each time the no or no buttons are hit
-      // Set state of swapiCharURL to current+1 > render > new API call
-      // Populates the center column with new SW character
+      
       swapiCharURL: 1,
       name: 'default',
       yesArray: [],
@@ -37,17 +35,16 @@ class App extends Component {
       isFetching: true,
     })
     return fetch(this.urlForStarWarsChrctrs(this.state.swapiCharURL))
-    // Check API response is ok
+    
     .then((response) => {
       if (!response.ok) {
-        throw Error("Network request failed"); // Throw error
+        throw Error("Network request failed");
       }
       return response
     })
-    // Format the results with JSON
+  
     .then(response => response.json())
-    // Pass the JSON formatted response
-    // Update this.state with the queried SW character name
+   
     .then((res) => {
       return this.setState({
         ...this.state,
@@ -62,14 +59,14 @@ class App extends Component {
     .catch((err) => {
       this.setState({
         isFetching: false,
-        requestFailed: true, //Catch errors
+        requestFailed: true, 
         error: err,
       })
     });
 }
 
 componentDidMount() {
-  // Using the above const, call the StarWars API for a character
+ 
   this.fetchStarWarsCharacters();
   this.setState({
     swapiCharURL: this.state.swapiCharURL + 1,
@@ -79,11 +76,11 @@ componentDidMount() {
 handleClick = (e) => {
   e.preventDefault();
 
-  const firstResult = head(this.state.fetchResults);          // Luke
+  const firstResult = head(this.state.fetchResults);         
 
-  const newFetchResults = this.state.fetchResults.slice(1);   // Empty array
+  const newFetchResults = this.state.fetchResults.slice(1);  
 
-  // Create a characterCard object to hold info
+  
   if (e.target.innerHTML === 'who is your best match') {
 
     console.log(firstResult);
