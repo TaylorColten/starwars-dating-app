@@ -6,7 +6,7 @@ const Matches = (props) => {
   return (
     <div
       style={{
-        backgroundColor: props.type === 'heroes' ? 'pink' : 'gray',
+        backgroundColor: props.type === 'light' ? 'pink' : 'gray',
       }}
     >
       {props.matches.length > 0
